@@ -6,9 +6,10 @@ from locators import Locators
 from pages.base_page import BasePage
 
 
+@allure.suite('Личный кабинет')
 class TestPersonalAccount:
 
-    @allure.title('Проверка перехода в личный кабинет')
+    @allure.title('Тест перехода в Личный кабинет, Историю заказов и Выход')
     @allure.description('Переход по клику на «Личный кабинет». После авторизации переход в раздел «История заказов» '
                         'и выход из аккаунта')
     def test_check_personal_account_and_history_orders_and_logout(self, driver):

@@ -5,11 +5,12 @@ from locators import Locators
 from data import DataUrl
 
 
+@allure.suite('Восстановление пароля')
 class TestPasswordRecover:
 
-    @allure.title('Восстановление пароля')
-    @allure.description('переход на страницу восстановления пароля по кнопке «Восстановить пароль»,ввод почты и клик '
-                        'по кнопке Восстановить,клик по кнопке показать/скрыть пароль делает поле активным  '
+    @allure.title('Тест восстановления пароля')
+    @allure.description('Переход на страницу восстановления пароля по кнопке «Восстановить пароль», ввод почты и клик '
+                        'по кнопке Восстановить. Клик по кнопке показать/скрыть пароль делает поле активным -'
                         'подсвечивает его.')
     def test_button_recovery_form(self, driver):
         driver.get(DataUrl.URL + DataUrl.LOGIN)
